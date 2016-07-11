@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head> 
+    <title>Product Sales - HTML5 Column Chart</title> 
+    <script src="canvasjs.min.js"></script> 
+  
+    <script type="text/javascript"> 
+        window.onload = function () { 
+            var chart = new CanvasJS.Chart("chartContainer", { 
+                title: { 
+                    text: "Product Sales - HTML5 Column Chart" 
+                }, 
+                data: [ 
+                { 
+                    type: "pie",//bar, line, pie ,column
+                    dataPoints: [ 
+                    { label: "Product A", y: 21 }, 
+                    { label: "Product B", y: 27 }, 
+                    { label: "Product C", y: 29 }, 
+                    { label: "Product D", y: 35 }, 
+                    { label: "Product E", y: 33 }, 
+                    { label: "Product F", y: 37 } 
+                    ] 
+                } 
+                ], 
+                theme: "theme1"
+                //theme: "theme2" 
+            }); 
+  
+            chart.render(); 
+        } 
+  
+    </script> 
+</head> 
+<body> 
+    <div id="chartContainer" style="height: 300px; width: 600px;"></div> 
+</body> 
+</html>
